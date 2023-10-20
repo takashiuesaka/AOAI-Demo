@@ -1,0 +1,28 @@
+.footerBottom {
+  padding: 15px 0 17px 0;
+  background: #2b3035;
+  text-align: center;
+  color: #fff;
+}
+
+.image-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* 横幅は変化するので100%にしておきます */
+  overflow: hidden;
+  /* これで画像が親要素の外にはみ出なくなります */
+}
+
+.image-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  /* 画像の横幅が親要素を超えないようにする */
+  max-height: 100%;
+  /* 画像の高さが親要素を超えないようにする */
+  width: auto;
+  height: auto;
+}
