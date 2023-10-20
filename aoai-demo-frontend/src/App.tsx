@@ -83,7 +83,7 @@ const App = () => {
   */
   const asyncGenerateTextEvent = useAsyncCallback(async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 
-    const args = [...keywords.imageTags.map(item => item.imageTag), ...keywords.inputKeywords]
+    const args = [...keywords.imageTags.filter(item => item.isChecked).map(item => item.imageTag), ...keywords.inputKeywords]
     // 生成済みの文章をクリア
     setGeneratedText('')
     await generateText(args)
